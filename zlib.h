@@ -1,5 +1,5 @@
 /* zlib.h -- interface of the 'zlib' general purpose compression library
-  version 1.2.7, February xxth, 2012
+  version 1.2.7, May 2nd, 2012
 
   Copyright (C) 1995-2012 Jean-loup Gailly and Mark Adler
   Copyright (c) 2010-2011 Code Aurora Forum. All rights reserved.
@@ -38,7 +38,7 @@
 extern "C" {
 #endif
 
-#define ZLIB_VERSION "1.2.7-motley"
+#define ZLIB_VERSION "1.2.7"
 #define ZLIB_VERNUM 0x1270
 #define ZLIB_VER_MAJOR 1
 #define ZLIB_VER_MINOR 2
@@ -1729,7 +1729,7 @@ ZEXTERN int ZEXPORT gzgetc_ OF((gzFile file));  /* backward compatibility */
 /* undocumented functions */
 ZEXTERN const char   * ZEXPORT zError           OF((int));
 ZEXTERN int            ZEXPORT inflateSyncPoint OF((z_streamp));
-ZEXTERN const uLongf * ZEXPORT get_crc_table    OF((void));
+ZEXTERN const z_crc_t FAR * ZEXPORT get_crc_table    OF((void));
 ZEXTERN int            ZEXPORT inflateUndermine OF((z_streamp, int));
 ZEXTERN int            ZEXPORT inflateResetKeep OF((z_streamp));
 ZEXTERN int            ZEXPORT deflateResetKeep OF((z_streamp));
